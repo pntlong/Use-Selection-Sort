@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+void nhapMang(int a[], int n){
+	printf("Nhap n: \n");
+	scanf("%d", &n);
+		for(int i=0;i<n;i++){
+		
+		printf("Nhap a[%d]: \n", i);
+		scanf("%d", &a[i]);
+	}
+}
+void selectionSort(int a[], int n){
+			int i;
+			int min=i;
+	for(int i=0; i<n-1; i++)
+	for(int j=i+1; j<n;j++)
+	if(a[j]<a[min])
+	min=j;
+	int j;
+	int x=a[min];
+		a[j]=a[min];
+		x=a[j];
+}
+void xuatMang(int a[], int n){
+	for(int i=0;i<n;i++)
+	printf("%2d", a[i]);
+}
+int main(){
+	int a[20], n;
+	nhapMang(a,n);
+	printf("\nMang truoc khi sap xep:");
+	xuatMang(a,n);
+	selectionSort(a,n);
+	printf("\nMang sau khi sap xep:");
+	xuatMang(a,n);
+}
